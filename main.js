@@ -54,4 +54,11 @@ function getShortestPath(origin, target) {
     return [origin, ...path.reverse()];
 }
 
-getShortestPath([0, 0], [7, 7]);
+function knightMoves(origin, target) {
+    const path = getShortestPath(origin, target);
+
+    console.log(`You made it in ${path.length - 1} moves! Here's your path:`);
+    path.forEach((move) => console.log(move));
+}
+
+knightMoves([3, 3], [4, 3]);
